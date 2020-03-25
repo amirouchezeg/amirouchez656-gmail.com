@@ -36,7 +36,7 @@ if ($res && $res->rowCount()>0)
 }
 
 $SQL = "INSERT INTO `user` (`login`, `password`, `first_name`, `last_name`, `age`, `id`) 
-	VALUES ('$login', '$passwd', '$fname', '$lname', '$age', NULL)";
+	VALUES ($login, $passwd, $fname, $lname, $age, NULL)";
 $res = $db->query($SQL);
 
 if (!$res) die('Error: ' . $db->errorInfo()[2]); 
