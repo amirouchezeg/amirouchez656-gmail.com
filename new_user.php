@@ -41,7 +41,6 @@ $res = $db->query($SQL);
 
 if (!$res) die('Error: ' . $db->errorInfo()[2]); 
 
-echo "<p>Utilisateur $login ajouté\n";
 $SQL = "SELECT * FROM user";
 
 echo 
